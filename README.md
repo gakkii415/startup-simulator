@@ -4,7 +4,7 @@
 
 ## 構成
 
-現在の構成です。`venture-001` は最初の事業の管理用IDです。
+現在の構成です。`counseling` はカウンセリング事業のフォルダです。
 
 ```text
 startup-simulator/
@@ -13,7 +13,7 @@ startup-simulator/
 ├── templates/
 │   └── tasks.md
 └── ventures/
-    └── venture-001/
+    └── counseling/
         ├── tasks.md
         └── artifacts/
 ```
@@ -63,7 +63,9 @@ AIへの依頼例：
 
 ## 事業を追加する
 
-`ventures/<business-id>/` のように重複しない事業フォルダを作り、`templates/tasks.md` を `tasks.md` として複製します。成果物はその事業の `artifacts/` に保存します。
+未使用の管理用ID（`venture-001`、`venture-002` など）で `ventures/` に事業フォルダを作り、`templates/tasks.md` を `tasks.md` として複製します。成果物はその事業の `artifacts/` に保存します。
+
+「事業を決める」で内容が確定したら、AIが短い英小文字の名前を決め、例えば `ventures/counseling/` に一度変更します。同名の別事業がある場合は `counseling-002` から未使用の番号を付けます。タスク・成果物・チェック状態を保持し、参照リンクも更新します。屋号の決定ではフォルダ名を変更しません。詳しい手順は [AGENTS.md](AGENTS.md#事業フォルダの命名と変更) に記載しています。
 
 共通テンプレートは `templates/tasks.md` です。事業固有の変更は各事業の `tasks.md` にだけ反映し、共通テンプレートは明示的な依頼がある場合だけ変更します。
 
