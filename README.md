@@ -4,14 +4,18 @@
 
 ## 構成
 
-現在の構成です。事業はまだ作成されていません。
+現在の構成です。`venture-001` は最初の事業の管理用IDです。
 
 ```text
 startup-simulator/
 ├── README.md
 ├── AGENTS.md
-└── templates/
-    └── tasks.md
+├── templates/
+│   └── tasks.md
+└── ventures/
+    └── venture-001/
+        ├── tasks.md
+        └── artifacts/
 ```
 
 新しい事業を始めるときに、次の構成を追加します。`<business-id>` はその事業を識別する名前です。
