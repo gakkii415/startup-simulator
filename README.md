@@ -4,24 +4,27 @@
 
 ## 構成
 
+現在の構成です。事業はまだ作成されていません。
+
 ```text
 startup-simulator/
 ├── README.md
 ├── AGENTS.md
-├── templates/
-│   └── tasks.md
-└── ventures/
-    ├── business-a/
-    │   ├── tasks.md
-    │   └── artifacts/
-    └── business-b/
-        ├── tasks.md
-        └── artifacts/
+└── templates/
+    └── tasks.md
+```
+
+新しい事業を始めるときに、次の構成を追加します。`<business-id>` はその事業を識別する名前です。
+
+```text
+ventures/<business-id>/
+├── tasks.md
+└── artifacts/
 ```
 
 ## 基本フロー
 
-1. 事業を選ぶ
+1. 既存の事業を選ぶ（まだない場合は「事業を追加する」の手順で作成する）
 2. タスク一覧を見る
 3. やるタスクを1つ選ぶ
 4. そのタスクだけAIと作業する
@@ -46,17 +49,17 @@ startup-simulator/
 
 AIへの依頼例：
 
-> business-a の tasks.md を見せて。
+> 対象事業の tasks.md を見せて。
 
-> business-a の「ロゴを作る」を進めて。
+> 対象事業の「ロゴを作る」を進めて。
 
-> business-a の「ロゴを作る」を完了にして。
+> 対象事業の「ロゴを作る」を完了にして。
 
-> business-a に「○○」というタスクを追加して。
+> 対象事業に「○○」というタスクを追加して。
 
 ## 事業を追加する
 
-`ventures/business-c/` のように重複しない事業フォルダを作り、`templates/tasks.md` を `tasks.md` として複製します。成果物はその事業の `artifacts/` に保存します。
+`ventures/<business-id>/` のように重複しない事業フォルダを作り、`templates/tasks.md` を `tasks.md` として複製します。成果物はその事業の `artifacts/` に保存します。
 
 共通テンプレートは `templates/tasks.md` です。事業固有の変更は各事業の `tasks.md` にだけ反映し、共通テンプレートは明示的な依頼がある場合だけ変更します。
 
