@@ -11,10 +11,12 @@ startup-simulator/
 ├── README.md
 ├── AGENTS.md
 ├── templates/
-│   └── tasks.md
+│   ├── tasks.md
+│   └── decisions.md
 └── ventures/
     └── counseling/
         ├── tasks.md
+        ├── decisions.md
         └── artifacts/
 ```
 
@@ -23,6 +25,7 @@ startup-simulator/
 ```text
 ventures/<business-id>/
 ├── tasks.md
+├── decisions.md
 └── artifacts/
 ```
 
@@ -40,7 +43,7 @@ ventures/<business-id>/
 
 ## 使い方
 
-1. 新しい事業を始めるときは `templates/tasks.md` をその事業の `ventures/<business-id>/tasks.md` に複製します。
+1. 新しい事業を始めるときは `templates/tasks.md` と `templates/decisions.md` をその事業の `ventures/<business-id>/` に複製します。
 2. その事業に不要なタスクは削除し、必要な固有タスクは追加します。
 3. タスク状態はチェックのOFF/ONだけで管理します。未完了は `- [ ]`、完了は `- [x]` です。
 4. ユーザーが取り組むタスクを1つ選び、AIとその作業を進めます。
@@ -49,7 +52,7 @@ ventures/<business-id>/
 
 「進行中」「確認待ち」「不要」などの別ステータスは使いません。
 
-タスクの状態は各事業の `tasks.md` を正本とします。
+タスクの状態は各事業の `tasks.md`、承認済みの内容は `decisions.md` を正本とします。チャットの種類やタスクの完了前後にかかわらず承認内容を随時記録・更新し、再開時に確認します。画像やサイトなどの成果物は `artifacts/` に保存します。
 
 AIへの依頼例：
 
@@ -63,11 +66,11 @@ AIへの依頼例：
 
 ## 事業を追加する
 
-未使用の管理用ID（`venture-001`、`venture-002` など）で `ventures/` に事業フォルダを作り、`templates/tasks.md` を `tasks.md` として複製します。成果物はその事業の `artifacts/` に保存します。
+未使用の管理用ID（`venture-001`、`venture-002` など）で `ventures/` に事業フォルダを作り、`templates/tasks.md` と `templates/decisions.md` をその事業内に複製します。成果物はその事業の `artifacts/` に保存します。
 
 「事業を決める」で内容が確定したら、AIが短い英小文字の名前を決め、例えば `ventures/counseling/` に一度変更します。同名の別事業がある場合は `counseling-002` から未使用の番号を付けます。タスク・成果物・チェック状態を保持し、参照リンクも更新します。屋号の決定ではフォルダ名を変更しません。詳しい手順は [AGENTS.md](AGENTS.md#事業フォルダの命名と変更) に記載しています。
 
-共通テンプレートは `templates/tasks.md` です。事業固有の変更は各事業の `tasks.md` にだけ反映し、共通テンプレートは明示的な依頼がある場合だけ変更します。
+共通テンプレートは `templates/tasks.md` と `templates/decisions.md` です。事業固有の変更は各事業内に反映し、共通テンプレートは明示的な依頼がある場合だけ変更します。
 
 ## 今回の範囲
 
