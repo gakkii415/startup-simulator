@@ -17,7 +17,10 @@ startup-simulator/
     └── counseling/
         ├── tasks.md
         ├── decisions.md
-        └── logo.png
+        ├── logo.png
+        ├── index.html
+        ├── hero.png
+        └── room.png
 ```
 
 新しい事業を始めるときに、次の構成を追加します。`<business-id>` はその事業を識別する名前です。
