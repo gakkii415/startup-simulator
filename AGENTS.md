@@ -23,7 +23,7 @@
 - 起業に必要なタスクを管理し、ユーザーが選んだタスクをAIと1つずつ実行していく。
 - 共通タスクテンプレートは `templates/tasks.md` を正本とする。
 - 新規事業は `ventures/<business-id>/` に作り、`templates/tasks.md` と `templates/decisions.md` をその事業に複製して開始する。
-- 各事業のタスクはその事業の `tasks.md`、成果物は同じ事業の `artifacts/` に保存する。他事業のデータや成果物を混在させない。
+- 各事業のタスクは `tasks.md`、承認内容は `decisions.md` に記録し、素材・ホームページを含む成果物は同じ事業フォルダ直下に保存する。`artifacts/`・`assets/`・`website/` は作らず、他事業の内容を混在させない。
 
 ## 基本フロー
 
