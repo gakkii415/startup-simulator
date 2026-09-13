@@ -4,7 +4,7 @@
 
 ## 構成
 
-現在の構成です。`counseling` はカウンセリング事業、`scarification` はスカリフィケーション事業（商圏：京都市）のフォルダです。
+現在の構成です。`counseling` はカウンセリング事業、`scarification` はスカリフィケーション事業、`house-cleaning` はハウスクリーニング事業（いずれも商圏：京都市）のフォルダです。
 
 ```text
 startup-simulator/
@@ -21,9 +21,18 @@ startup-simulator/
     │   ├── index.html
     │   ├── hero.png
     │   └── room.png
-    └── scarification/
+    ├── scarification/
+    │   ├── tasks.md
+    │   └── decisions.md
+    └── house-cleaning/
         ├── tasks.md
-        └── decisions.md
+        ├── decisions.md
+        ├── business-plan.md
+        ├── index.html
+        ├── reservation.html
+        ├── google-business-profile.md
+        ├── social.md
+        └── その他の画像・表示用ファイル
 ```
 
 新しい事業を始めるときに、次の構成を追加します。`<business-id>` はその事業を識別する名前です。
@@ -35,6 +44,8 @@ ventures/<business-id>/
 ```
 
 スカリフィケーション事業：[タスク一覧](ventures/scarification/tasks.md)・[決定事項](ventures/scarification/decisions.md)
+
+ハウスクリーニング事業（仮屋号：京すみか）：[タスク一覧](ventures/house-cleaning/tasks.md)・[決定事項](ventures/house-cleaning/decisions.md)・[事業計画](ventures/house-cleaning/business-plan.md)
 
 ## 基本フロー
 
