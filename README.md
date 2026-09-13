@@ -4,7 +4,7 @@
 
 ## 構成
 
-現在の構成です。`counseling` はカウンセリング事業のフォルダです。
+現在の構成です。`counseling` はカウンセリング事業、`scarification` はスカリフィケーション事業（商圏：京都市）のフォルダです。
 
 ```text
 startup-simulator/
@@ -14,13 +14,16 @@ startup-simulator/
 │   ├── tasks.md
 │   └── decisions.md
 └── ventures/
-    └── counseling/
+    ├── counseling/
+    │   ├── tasks.md
+    │   ├── decisions.md
+    │   ├── logo.png
+    │   ├── index.html
+    │   ├── hero.png
+    │   └── room.png
+    └── scarification/
         ├── tasks.md
-        ├── decisions.md
-        ├── logo.png
-        ├── index.html
-        ├── hero.png
-        └── room.png
+        └── decisions.md
 ```
 
 新しい事業を始めるときに、次の構成を追加します。`<business-id>` はその事業を識別する名前です。
@@ -30,6 +33,8 @@ ventures/<business-id>/
 ├── tasks.md
 └── decisions.md
 ```
+
+スカリフィケーション事業：[タスク一覧](ventures/scarification/tasks.md)・[決定事項](ventures/scarification/decisions.md)
 
 ## 基本フロー
 
